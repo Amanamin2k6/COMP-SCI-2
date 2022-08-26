@@ -1,0 +1,8 @@
+function start(){
+	// Write your code here
+	move();
+    for(var i = 0; i < 100; i++){
+        takeBall();
+    }
+    move();
+}
