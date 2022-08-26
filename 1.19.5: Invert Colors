@@ -1,0 +1,19 @@
+/*
+ * This program has Karel invert colors
+ */
+
+function start(){
+    while (frontIsClear()){
+        if (colorIs(Color.red)){
+            paint(Color.blue);
+        } else {
+            paint(Color.red);
+        }
+        move();
+    }
+    if (colorIs(Color.red)){
+        paint(Color.blue);
+    } else {
+        paint(Color.red);
+    }
+}
