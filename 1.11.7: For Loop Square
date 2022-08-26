@@ -1,0 +1,10 @@
+/* Try to lay down a square of four tennis balls
+ * using a for loop. */
+function start(){
+	/* Your code goes here! */
+	for(var i = 0; i < 4; i++){
+        putBall();
+        move();
+        turnLeft();
+	}
+}
