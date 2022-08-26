@@ -1,0 +1,36 @@
+function start(){
+	// start function which will conduct the action
+	putBallthree();
+	down();
+	putBallthree();
+	turnRight();
+	
+	
+}
+//turn right function, turns left 3 times
+function turnRight(){
+    turnLeft();
+    turnLeft();
+    turnLeft();
+}
+//move and place the ball in to the tower formation
+function putBallthree(){
+    move();
+    putBall();
+    turnLeft();
+    move();
+    putBall();
+    move();
+    putBall();
+    move();
+}
+//come back down and move to the next tower
+function down(){
+    turnLeft();
+    turnLeft();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+}
