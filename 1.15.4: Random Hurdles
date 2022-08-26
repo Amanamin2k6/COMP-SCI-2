@@ -1,0 +1,31 @@
+function start(){
+    stop = false;
+	// Write your code here
+	while (noBallsPresent()){
+	    if (frontIsClear()){
+	        move();
+	    } else {
+	        jumpHurdle();
+	        if (stop == true){
+	            break;
+	        }
+	    }
+	}
+}
+function jumpHurdle(){
+    turnLeft();
+    move();
+    turnRight();
+    if (frontIsClear()){
+        move();
+        turnRight();
+        move();
+        turnLeft();    
+    } else {
+        turnRight();
+        move();
+        turnLeft();
+        stop = true;
+    }
+    
+}
