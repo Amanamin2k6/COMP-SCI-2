@@ -1,0 +1,18 @@
+/* This program draws a big tower from Karel's starting spot */
+function start(){
+	while (noBallsPresent()){
+	    north();
+	    putBall();
+	    moveup();
+	}
+}
+function north(){
+    while (notFacingNorth()){
+        turnLeft();
+    }
+}
+function moveup(){
+    if(frontIsClear()){
+        move();
+    }
+}
