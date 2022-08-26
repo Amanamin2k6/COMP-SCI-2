@@ -1,0 +1,29 @@
+function start(){
+	// Write your code here
+	putBallthree();
+	down();
+	putBallthree();
+	turnRight();
+	
+	
+}
+
+
+function putBallthree(){
+    move();
+    putBall();
+    turnLeft();
+    move();
+    putBall();
+    move();
+    putBall();
+    move();
+}
+function down(){
+    turnAround();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+}
