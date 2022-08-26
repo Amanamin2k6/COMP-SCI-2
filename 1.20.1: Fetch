@@ -1,0 +1,27 @@
+function start() {
+    up();
+    down();
+}
+function up(){
+    turnLeft();
+    for (var i = 0; i < 4; i++) {
+        // Code that will run 'COUNT' times
+        move();
+    }
+    turnRight();
+    move();
+    move();
+    takeBall();
+}
+function down(){
+    turnAround();
+    move();
+    move();
+    turnLeft();
+    for (var i = 0; i < 4; i++) {
+        // Code that will run 'COUNT' times
+        move();
+    }
+    turnLeft();
+    putBall();
+}
