@@ -1,0 +1,17 @@
+// Use the dropdown in the editor to change worlds 
+// Your code should work correctly in each world
+
+function start(){
+	// Write your code here
+	if (facingSouth()){
+	    ufacingSouth();
+	} else {
+	    ufacingWest();
+	}
+}
+function ufacingSouth(){
+    turnLeft();
+}
+function ufacingWest(){
+    turnAround();
+}
