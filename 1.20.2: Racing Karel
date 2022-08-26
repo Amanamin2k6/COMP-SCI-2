@@ -1,0 +1,21 @@
+/* This program will have Karel run around the racetrack
+ * 8 times. */
+function start() {
+    for (var i = 0; i < 4; i++) {
+	    putBalls();
+	    up();
+    }
+    
+    
+}
+function putBalls(){
+    for (var i = 0; i < 8; i++) {
+	    putBall();
+    }
+}
+function up(){
+    while (frontIsClear()){
+        move();
+    }
+    turnLeft();
+}
