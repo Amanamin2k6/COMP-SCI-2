@@ -1,0 +1,15 @@
+function turnRight(){
+    turnLeft();
+    turnLeft();
+    turnLeft();
+}
+putBall();
+function turn(){
+    turnRight();
+    move();
+    turnLeft();
+    move();
+    putBall();
+}
+turn();
+turn();
