@@ -1,0 +1,41 @@
+//start pickup
+function start() {
+    for (var i = 0; i < 12; i++){
+	    rowOne();
+	    rowTwo();
+	    safeMove();
+	    turnRight();
+    }
+    rowOne();
+    rowTwo();
+    turnAround();
+    safeMove();
+}
+function rowOne(){
+    while (frontIsClear()){
+        ball();
+        safeMove();
+    }
+    ball();
+    turnLeft();
+    safeMove();
+    turnLeft();
+}
+function rowTwo(){
+    while (frontIsClear()){
+        ball();
+        safeMove();
+    }
+    ball();
+    turnRight();
+}
+function safeMove(){
+    if (frontIsClear()){
+        move();
+    }
+}
+function ball(){
+    if (ballsPresent()){
+        takeBall();
+    }
+}
