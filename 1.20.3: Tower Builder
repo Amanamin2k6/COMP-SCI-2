@@ -1,0 +1,29 @@
+//starts the tower
+
+function start(){
+    buildTower();
+    while(frontIsClear()){
+        move();
+        safeMove();
+    }
+}
+
+function buildTower(){
+    turnLeft();
+    putBall();
+    move();
+    putBall();
+    move();
+    putBall();
+    turnAround();
+    move();
+    move();
+    turnLeft();
+}
+
+function safeMove(){
+    if(frontIsClear()){
+        move();
+        buildTower();
+    }
+}
