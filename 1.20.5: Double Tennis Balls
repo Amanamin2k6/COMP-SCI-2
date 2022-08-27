@@ -1,0 +1,33 @@
+function start(){
+    move();
+    while (ballsPresent()){
+        takeBall();
+        move();
+        putTwoBalls();
+        moveBack();
+    }
+    move();
+    while (ballsPresent()){
+        putBack();
+    }
+    moveBack();
+    moveBack();
+}
+// move back
+function moveBack(){
+    turnAround();
+    move();
+    turnAround();
+}
+// take two balls
+function putTwoBalls(){
+    putBall();
+    putBall();
+}
+//put the balls back
+function putBack(){
+    takeBall();
+    moveBack();
+    putBall();
+    move();
+}
