@@ -1,0 +1,9 @@
+//Declare a constant here to represent the cost of a frisbee
+
+function start(){
+	/* Write your code here, and get rid of this comment */
+	var COST_OF_FRISBEE = 15;
+	var num = readInt("How many do you want? ");
+	var cost = COST_OF_FRISBEE * num;
+	println("the total cost is $" + cost);
+}
