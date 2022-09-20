@@ -1,0 +1,21 @@
+/* Constants representing the radius of the top, middle,
+ * and bottom snowball. */
+var BOTTOM_RADIUS = 100;
+var MID_RADIUS = 60;
+var TOP_RADIUS = 30;
+
+function start(){
+	/* Write your code to make the snowman here! */
+	var bottomCircle = new Circle(BOTTOM_RADIUS);
+    bottomCircle.setPosition((getWidth())/2,(getHeight()-BOTTOM_RADIUS));
+    bottomCircle.setColor(Color.gray);
+    add(bottomCircle);
+    var midCircle = new Circle(MID_RADIUS);
+    midCircle.setPosition((getWidth()/2), getHeight()-260);
+    midCircle.setColor(Color.gray);
+    add(midCircle);
+    var topCircle = new Circle(TOP_RADIUS);
+    topCircle.setPosition((getWidth()/2), getHeight()-350);
+    topCircle.setColor(Color.gray);
+    add(topCircle);
+}
