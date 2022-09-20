@@ -1,0 +1,9 @@
+function start(){
+    mouseClickMethod(makeRect);
+}
+function makeRect(e){
+    var rect = new Rectangle(25, 50);
+    rect.setColor(Randomizer.nextColor());
+    rect.setPosition(e.getX(), e.getY());
+    add(rect);
+}
