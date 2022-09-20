@@ -1,0 +1,13 @@
+function start(){
+	
+	// Code Segment One - Data Type - Numbers
+	var numResult = 24  + 24;
+	println(numResult);
+	
+	// Code Segment Two - Data Type - Strings
+	// Change both numbers to strings and run code
+	// Change only one number to a string and run code. What happens?
+	var stringResult = "24" + "24";
+	println(stringResult);
+
+}
