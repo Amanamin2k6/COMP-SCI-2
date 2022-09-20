@@ -1,0 +1,16 @@
+/* This program should draw the French flag. The
+ * left third of the canvas is blue, the middle third
+ * is white, and the right third is red. */
+function start(){
+	var newRect1 = new Rectangle((getWidth())/3, getHeight());
+	var newRect2 = new Rectangle((getWidth())/3, getHeight());
+	var newRect3 = new Rectangle((getWidth())/3, getHeight());
+	newRect1.setColor(Color.blue);
+	newRect2.setColor(Color.white);
+	newRect3.setColor(Color.red);
+	newRect2.setPosition((getWidth())/3, 0);
+	newRect3.setPosition((2*(getWidth()))/3, 0);
+	add(newRect1);
+	add(newRect2);
+	add(newRect3);
+}
