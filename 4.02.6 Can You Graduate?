@@ -1,0 +1,17 @@
+function start(){
+	var credits = readBoolean("Do you have all your credits to graduate? ");
+	var require = readBoolean("Do you meet all of the requirements? ");
+	if (credits){
+	    println(true);
+	} else{
+	    print(false);
+	}
+	if (require){
+	    println(true);
+	} else {
+	    println(false);
+	}
+	if (credits && require){
+	    print(true);
+	}
+}
