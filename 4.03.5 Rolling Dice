@@ -1,0 +1,6 @@
+function start(){
+	var roll1 = readInt("What was the first number you rolled? ");
+	var roll2 = readInt("What was the second number you rolled?");
+	var rolledDoubles = roll1 == roll2;
+	println("Your rolled a double: " + rolledDoubles);
+}
