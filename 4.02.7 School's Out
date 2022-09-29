@@ -1,0 +1,10 @@
+function start(){
+    //Write your code here
+    var weekday = readBoolean("Is it a weekday? ");
+    var holiday = readBoolean("Is it a holiday? ");
+    if (holiday || (weekday == false)){
+        println("There is no school today: true");
+    } else {
+        println("There is no school today: false");
+    }
+}
