@@ -1,0 +1,12 @@
+function start(){
+	var points = readLine("How many points did you? ");
+	var rebounds = readLine("How many rebounds did you get?");
+	var assists = readLine("How many assists did you have?");
+	
+	if ((points >= 25) || ((points >= 10) && (rebounds >= 10) && (assists >= 10))){
+	    var star = true;
+	} else {
+	    var star = false;
+	}
+	println(star);
+}
