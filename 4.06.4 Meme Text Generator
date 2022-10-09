@@ -1,0 +1,5 @@
+function start(){
+	for (var i = 0; i < 50; i++){
+	    println("When you take AP computer science to learn, but its the same stuff from last year.");
+	}
+}
