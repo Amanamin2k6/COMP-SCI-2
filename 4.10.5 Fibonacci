@@ -1,0 +1,11 @@
+var MAX = 1000;
+var num1 = 1;
+var num2 = 1;
+println("1");
+function start(){
+	for (var i = 1; i < MAX; i = num1 + num2){
+	    num1 = num2;
+	    num2 = i;
+	    println(i)
+	}
+}
