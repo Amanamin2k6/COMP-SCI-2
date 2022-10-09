@@ -1,0 +1,9 @@
+var MIN = readInt("Enter the first number. ");
+var MAX = readInt("Enter the second number. ");
+var sum = 0;
+function start(){
+	for(var i = MIN; i <= MAX; i++){
+	    sum += i;
+	}
+	println("The sum was " + sum);
+}
