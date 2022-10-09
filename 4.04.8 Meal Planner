@@ -1,0 +1,12 @@
+function start(){
+	var meal = readLine("What meal would you like? ");
+	if (meal == "breakfast"){
+	    println("What about cereal?");
+	} else if (meal == "lunch"){
+	    println("What about a salad? ");
+	} else if (meal == "dinner"){
+	    println("What about a hamburger and fries?");
+	} else{
+	    println("For a snack, what about a charcuterie board?");
+	}
+}
