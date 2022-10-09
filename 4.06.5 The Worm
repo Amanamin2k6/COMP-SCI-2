@@ -1,0 +1,15 @@
+var NUM_CIRCLES = 15;
+var circle;
+// This graphics program should draw a worm. 
+// A worm is made up of NUM_CIRCLES circles. 
+// Use a for loop to draw the worm, 
+// centered vertically in the screen. 
+// Also, be sure that the worm is still drawn across 
+// the whole canvas, even if the value of NUM_CIRCLES is changed.
+function start(){
+	for (var i = 0; i < NUM_CIRCLES; ++i){
+	    circle = new Circle(13.3);
+	    circle.setPosition(((26.6*i)+13.3), (getHeight()/2));
+	    add(circle);
+	}
+}
