@@ -1,0 +1,8 @@
+var N = 5;
+var answer = 1;
+function start(){
+	for (var i = N; i > 0; i--){
+	    answer *= i 
+	}
+	println(answer)
+}
