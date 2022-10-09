@@ -1,0 +1,17 @@
+var radius = 10;
+var circle;
+function start(){
+    circle = new Circle(radius);
+    circle.setPosition((getWidth() / 2), (getHeight() / 2));
+    add(circle);
+    keyDownMethod(keyDown);
+}
+function keyDown(e) {
+    if (e.key == "ArrowUp") {
+        radius += 5;
+    }
+    if (e.key == "ArrowDown") {
+        radius -= 5;
+    }
+    circle.setRadius(radius);
+}
