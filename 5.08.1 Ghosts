@@ -1,0 +1,123 @@
+// Constants for main ghost body
+var HEAD_RADIUS = 35;
+var BODY_WIDTH = HEAD_RADIUS * 2;
+var BODY_HEIGHT = 60;
+var NUM_FEET = 3;
+var FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2); 
+
+// Constants for eyes
+var PUPIL_RADIUS = 4;
+var PUPIL_LEFT_OFFSET = 8;
+var PUPIL_RIGHT_OFFSET = 20;
+var EYE_RADIUS = 10;
+var EYE_OFFSET = 14;
+
+/* the code will take the parameters provided in the start function to design
+the ghosts all together.*/
+function start(){
+    var centerX = getWidth()/2;
+    var centerY = getHeight()/2;
+    drawGhost(centerX, centerY, Color.red);
+    drawGhost(100,100, Color.green);
+    drawGhost(300, 200, Color.black);
+    drawGhost(40, 300, Color.orange);
+    drawGhost(300, 50, Color.yellow);
+}
+function drawCircle(x, y, color){
+    //create a new head
+	var circle = new Circle (HEAD_RADIUS);
+	//set the position of the head to the parameters
+	circle.setPosition(x, y);
+	//set the color of the head to the parrameters
+	circle.setColor(color);
+	//add circle to the canvas
+	add(circle);
+}
+function drawBody(x, y, color){
+    //create a new body
+    var body = new Rectangle(BODY_WIDTH, BODY_HEIGHT);
+    //set the position of the body to the left most edge of the head
+    body.setPosition((x - HEAD_RADIUS), y);
+    //Set the color of the body to the parameter
+    body.setColor(color);
+    //add body to canvas
+    add(body);
+}
+function drawLegs(x, y, color){
+    //create new foot
+    var circle1 = new Circle(FOOT_RADIUS);
+    //set position of the foot to the center of the body
+    circle1.setPosition(x, (y + BODY_HEIGHT));
+    //set the color of the leg to the parameter
+    circle1.setColor(color);
+    //add foot to canvas
+    add(circle1);
+    
+    //create new foot
+    var circle2 = new Circle(FOOT_RADIUS);
+    //set position of the foot to the right of the body
+    circle2.setPosition(x + (FOOT_RADIUS * 2), (y + BODY_HEIGHT));
+    //set the color of the leg to the parameter
+    circle2.setColor(color);
+    //add foot to canvas
+    add(circle2);
+    
+    //create new foot
+    var circle3 = new Circle(FOOT_RADIUS);
+    //set position of the foot to the left of the body
+    circle3.setPosition(x - (FOOT_RADIUS * 2), (y + BODY_HEIGHT));
+    //set the color of the leg to the parameter
+    circle3.setColor(color);
+    //add foot to canvas
+    add(circle3);
+}
+function drawEyes(x, y){
+    //create new eye
+    var circle1 = new Circle(EYE_RADIUS);
+    //set the postion of the left eye
+    circle1.setPosition(x - (EYE_OFFSET), y);
+    //set the color of eye to white
+    circle1.setColor(Color.WHITE);
+    //add eye to canvas
+    add(circle1);
+    
+    //create new eye
+    var circle2 = new Circle(EYE_RADIUS);
+    //set the position for the right eye
+    circle2.setPosition(x + (EYE_OFFSET), y);
+   //set the color of eye to white
+    circle2.setColor(Color.WHITE);
+    //add eye to canvas
+    add(circle2);
+}
+function drawPupils(x, y){
+    //create new pupil
+    var circle1 = new Circle(PUPIL_RADIUS);
+    //set the position for the left pupil using left pupil offset
+    circle1.setPosition(x - (PUPIL_LEFT_OFFSET), y);
+    //set the color of pupil to blue
+    circle1.setColor(Color.BLUE);
+    //add pupil to canvas
+    add(circle1);
+    
+    //create new pupil
+    var circle2 = new Circle(PUPIL_RADIUS);
+    //set position for right pupil using right pupil offset
+    circle2.setPosition(x + (PUPIL_RIGHT_OFFSET), y);
+    //set the color of pupil to blue
+    circle2.setColor(Color.BLUE);
+    //add pupil to canvas
+    add(circle2);
+}
+function drawGhost(centerX, centerY, color){
+    //draw the head
+    drawCircle(centerX, centerY, color);
+    //draw the body
+    drawBody(centerX, centerY, color);
+    //draw the legs
+    drawLegs(centerX, centerY, color);
+    //draw the eyes
+    drawEyes(centerX, centerY);
+    //draw the pupils
+    drawPupils(centerX, centerY);
+}
