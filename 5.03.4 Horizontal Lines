@@ -5,6 +5,7 @@ function start(){
     horizontalLine(300, 20);
 }
 function horizontalLine(length, y){
+    //create new line with parameters
     var line = new Line(0, length, y, length);
     add(line);
 }
