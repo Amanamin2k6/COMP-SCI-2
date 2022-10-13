@@ -1,0 +1,8 @@
+function start(){
+    //call the quadruple function
+	var x = quadruple(3);
+}
+function quadruple(x){
+    //use the x parameter to return x * 4
+    return 4*x;
+}
