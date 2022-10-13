@@ -7,9 +7,13 @@ function start(){
 	convertHeightToMeters(6, 4);
 }
 function convertHeightToMeters(feet, inches){
+    //find out the total inches
     var tot_inches =  feet * FEET_TO_INCHES;
     tot_inches += inches;
+    // convert inches to cm
     var cm = tot_inches * INCHES_TO_CM;
+    //convert cm to meters
     var meters = cm * CM_TO_METERS;
+    //print results
     println(feet + " feet, "+ inches + " inches = " + meters + " meters");
 }
