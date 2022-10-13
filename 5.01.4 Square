@@ -1,0 +1,9 @@
+function start(){
+    //call sqaure function, with parameter 60
+	square(60);
+}
+function square(x){
+    // treat parameter as x, multiply it by itself to get square into num variable, print num
+    var num = x * x;
+    println(num);
+}
