@@ -1,0 +1,8 @@
+function start(){
+    //call square with as parameter
+	var x = square(5);
+}
+function square(x){
+    //return x*x
+    return x*x;
+}
