@@ -1,0 +1,15 @@
+var INCHES_TO_CM = 2.54;
+var CM_TO_METERS = 0.01;
+var FEET_TO_INCHES = 12;
+
+function start(){
+    //calling convertHeightToMeters with feet and inches as the parameters
+	convertHeightToMeters(6, 4);
+}
+function convertHeightToMeters(feet, inches){
+    var tot_inches =  feet * FEET_TO_INCHES;
+    tot_inches += inches;
+    var cm = tot_inches * INCHES_TO_CM;
+    var meters = cm * CM_TO_METERS;
+    println(feet + " feet, "+ inches + " inches = " + meters + " meters");
+}
