@@ -1,0 +1,10 @@
+/* All you have to do in this exercise is write a good comment that explains
+ * what local variables are. You should also give an example of a function
+ * and what the local variables are, and what the scope is of the variable.
+ */
+/* a local variable is a variable that is stored inside of a function
+*and has no identiy outsid eof the function, a scope in a function is
+*when you have the same variable name inside a function and outside 
+*of it, yet they can have two diferent values because they are both
+*stored in different areas.
+*/
