@@ -1,0 +1,11 @@
+function start(){
+	//call triple function with parameter as a number
+	triple(2);
+	triple(3);
+}
+function triple(x){
+    //multiply the x parameter by 3 and save as num
+    var num = 3 * x;
+    //print num
+    println(num);
+}
