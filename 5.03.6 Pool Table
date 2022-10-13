@@ -1,0 +1,32 @@
+var POOL_BALL_RADIUS = 40;
+var POOL_BALL_FONT = "30pt Arial";
+
+function start(){
+    //add the assigned pool balls
+	drawPoolBall(Color.orange, 5, 100, 100);
+	drawPoolBall(Color.green, 6, 50, 200);
+	drawPoolBall(Color.red, 3, 150, 350);
+	drawPoolBall(Color.blue, 2, 250, 140);
+    drawPoolBall(Color.yellow, 1, 300, 300);
+	// Add some more pool balls!
+}
+
+
+function drawPoolBall(color, num, x, y){
+    //create a new ball
+	var circle = new Circle (POOL_BALL_RADIUS);
+	//set the position of the ball to the parameters
+	circle.setPosition(x, y);
+	//set the color of the ball to the parrameters
+	circle.setColor(color);
+	//add circle to the canvas
+	add(circle);
+	//create a new text with parameters
+	var txt = new Text(num, POOL_BALL_FONT);
+	//set the position of the text to the x and y parameters
+	txt.setPosition(x, y);
+	//set the color of the text white
+	txt.setColor(Color.WHITE);
+	//add text to the canvas
+	add(txt);
+}
