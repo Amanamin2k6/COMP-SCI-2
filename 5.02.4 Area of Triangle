@@ -1,0 +1,9 @@
+function start(){
+    //calling the triangleArea function with basse and height parameters
+    triangleArea(5, 4);
+}
+function triangleArea(base, height){
+    // saving the area as area varibale and printing it
+    var area = 1/2 * base * height;
+    println(area);
+}
