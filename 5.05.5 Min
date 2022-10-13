@@ -1,0 +1,16 @@
+function start(){
+    //make the x variable data the return of min function with parameters 10, 14
+    var x = min(10, 14);
+    // print the results of the min function
+    println("The min is " + x);
+}
+function min(x, y){
+    //min function with parameter x and y, will determine which value if the minimum
+    if (x < y){
+        //if x is less than y, return x
+        return x;
+    } else {
+        //else return y
+        return y;
+    }
+}
