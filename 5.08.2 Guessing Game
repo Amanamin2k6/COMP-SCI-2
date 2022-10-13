@@ -1,0 +1,23 @@
+/* This program will play a simple guessing game.
+ * The user will guess, and the computer should print if
+ * the guess was too high, too low, or correct.
+ */
+function start() {
+    //get random number
+    var answer = Randomizer.nextInt(1,100);
+    while (true){
+        //get user guess
+        var guess = readInt("Guess?");
+        //check if asnwer is right
+        if (guess == answer){
+            println("Correct!");
+            break;
+            //else check if guess is higher or lower
+        } else if (guess > answer) {
+            println("High.");
+            
+        }else if (guess< answer){
+            println("Low.");
+        }
+    }
+}
