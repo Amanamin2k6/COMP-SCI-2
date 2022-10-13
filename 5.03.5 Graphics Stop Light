@@ -1,0 +1,53 @@
+var LIGHT_RADIUS = 35;
+var STOPLIGHT_WIDTH = 120;
+var STOPLIGHT_HEIGHT = 350;
+var BUFFER = 100;
+var GRAY_COLOR = "#737071";
+
+function start(){
+    //create each part of the stop light in order
+    rect();
+	yelCircle();
+	redCircle();
+	greenCircle();
+}
+function rect(){
+    //create the rectangle with the dimensions provided
+    var rect = new Rectangle(STOPLIGHT_WIDTH, STOPLIGHT_HEIGHT);
+    //get the postion of the rectangle to the center of the canvas
+    rect.setPosition((getWidth()/2)-(STOPLIGHT_WIDTH/2), (getHeight()/2)-(STOPLIGHT_HEIGHT/2) );
+    //set the color of the rectangle to the grey color code provided
+    rect.setColor(GRAY_COLOR);
+    //add the rectangle to the canvas
+    add(rect);
+}
+function yelCircle(){
+    //create the yellow circle with provided radius 
+    var circle = new Circle(LIGHT_RADIUS);
+    // set the position of the cirle to the center of the canvas
+    circle.setPosition((getWidth()/2), (getHeight()/2));
+    //set the color of the cicle to yellow
+    circle.setColor(Color.YELLOW);
+    //add circle to the canvas
+    add(circle);
+}
+function redCircle(){
+    //create the red circle with provided radius
+    var circle = new Circle(LIGHT_RADIUS);
+    //set the position of the circle to the center but offset by the buffer
+    circle.setPosition((getWidth()/2), ((getHeight()/2)-BUFFER));
+    //set color to red
+    circle.setColor(Color.RED);
+    //add circle to the canvas
+    add(circle);
+}
+function greenCircle(){
+    //create the green circle with the provided radius
+    var circle = new Circle(LIGHT_RADIUS);
+    //set postion to the center and offset by the buffer
+    circle.setPosition((getWidth()/2), ((getHeight()/2)+BUFFER));
+    // set the color to green
+    circle.setColor(Color.GREEN);
+    //add the circle to the canvas
+    add(circle);
+}
