@@ -1,0 +1,76 @@
+//global variables
+var num_triangle = 1;
+var semiperimeter = 0;
+var perimeter = 0;
+var area = 0;
+var sideOne = 0;
+var sideTwo = 0;
+var sideThree = 0;
+var firstName = "";
+var lastName = ""; 
+//start the code
+function start(){
+    while (true){
+//ask for name
+        firstName = readLine("Enter your First Name: ");
+        lastName = readLine("Enter your Last Name: ");
+        triangle();
+//ask if there is another user
+        var again = readLine("Would you like to enter a new user? y/n ");
+        if (again == "n"){
+            break;
+        }
+    }
+}
+function triangle(){
+    while (true){
+        num_triangle = 1
+        while (true){
+//ask for the sides
+            sideOne = readInt("Enter the measure of side 1: ");
+            sideTwo = readInt("Enter the measure of side 2: ");
+            sideThree = readInt("Enter the measure of side 3: ");
+//check if sides are negative
+            if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0){
+                println("Invalid triangle! Try Again");
+                continue;
+            }
+            calculation();
+//check if triangle is valid
+            if (area == 0){
+                println("Such triangle does not exist! Try Again!")
+            } else {
+//print results
+                results();
+                break;
+            }
+        }
+//Ask if they would like to add another triangle
+        var again = readLine("Would you like to enter a new triangle? y/n ");
+        if (again == "n"){
+            break;
+        }
+        num_triangle++;
+
+    }
+}
+        
+function calculation(){
+//Find Perimeter
+    perimeter = (sideOne + sideTwo + sideThree);
+//Find Semiperimeter
+    semiperimeter = (perimeter / 2);
+//Find Area
+    area = Math.sqrt(semiperimeter * ((semiperimeter - sideOne )*(semiperimeter - sideTwo )*(semiperimeter - sideThree )))
+}
+function results(){
+//Print all components of the triangle
+    println(firstName + " " + lastName);
+    println("Triangle " + num_triangle);
+    println("Side 1: " + sideOne);
+    println("Side 2: " + sideTwo);
+    println("Side 3: " + sideThree);
+    println("Perimeter: " + perimeter);
+    
+
+}
