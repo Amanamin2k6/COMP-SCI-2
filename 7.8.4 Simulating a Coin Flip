@@ -1,0 +1,12 @@
+function start() {
+//get a random true or flase (50-50 chance)
+    var result = Randomizer.nextBoolean();
+//if result is true print heads
+    if (result == true){
+        println("Heads")
+    } else{
+//else print tails
+        println("Tails")
+    }
+    
+}
