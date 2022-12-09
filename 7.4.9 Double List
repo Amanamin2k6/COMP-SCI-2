@@ -1,0 +1,14 @@
+var c = [];
+function start(){
+//array
+	var arr = [1,2,3,4];
+    var doubled = doubleList(arr);
+    println(doubled);
+}
+function doubleList(arr){
+    for (var i = 0; i < arr.length; i++){
+        c.push(arr[i]);
+        c.push(arr[i]);
+    }
+    return(c)
+}
