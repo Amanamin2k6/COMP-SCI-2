@@ -1,0 +1,11 @@
+function start(){
+	// Write your code here
+	//create movie array
+	var movieList = ["Inside Out", "Luca", "Smile", "Martian"];
+	//print index 0
+	println(movieList[0]);
+	//make index 0 = Star Wars
+	movieList[0] = "Star Wars";
+	//print new index 0
+	println(movieList[0]);
+}
