@@ -1,0 +1,17 @@
+function start(){
+	var line = ["Sam", "Lisa", "Laurie", "Bob", "Ryan"];
+	var line2 = ["Tony", "Lisa", "Laurie", "Karen"];
+    var bob1 = line.indexOf("Bob");
+    if (bob1 > -1){
+        println("Bob is in the first line.");
+    } else{
+        println("Bob is not in the first line.");
+    }
+    var bob2 = line2.indexOf("Bob");
+    if (bob2 > -1){
+        println("Bob is in the second line.");
+    } else {
+        println("Bob is not in the second line.");
+    }
+    
+}
