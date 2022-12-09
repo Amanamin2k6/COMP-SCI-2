@@ -1,0 +1,7 @@
+function start(){
+	// Write your code here
+	//create the array
+	var travelList = ["cancun", "spain", "maldives", "moon", "mars"];
+	//print index 2
+	println(travelList[2]);
+}
