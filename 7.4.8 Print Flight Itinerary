@@ -1,0 +1,13 @@
+function start(){
+//define the flight itinerary
+    var flight_itinerary = ["San Francisco", "New York", "Chicago", "Honolulu"];
+//a for loop that will print each element in the flight_itinerary list followed by an arrow
+    for (var i = 0; i < flight_itinerary.length; i++){
+        print(flight_itinerary[i]);
+//controls where to put the arrow
+        if (i < (flight_itinerary.length) - 1){
+            print(" -> ")
+        }
+    }
+    
+}
