@@ -1,0 +1,15 @@
+var newarr = [];
+function start(){
+    var arr = [1,2,3,4,5,6];
+    var evens = onlyEvens(arr);
+    println(evens);
+}
+
+function onlyEvens(arr){
+    for (var i = 0; i < arr.length; i++){
+        if (((arr[i]) % 2) == 0){
+            newarr.push(arr[i])
+        }
+    }
+    return(newarr)
+}
