@@ -1,0 +1,20 @@
+function start(){
+	// Write your code here
+	//creating the array
+	var newList = [];
+	//push the first three elements
+	newList.push(3);
+	newList.push("hello");
+	newList.push(false);
+	//print the first three elements
+	println(newList[0]);
+	println(newList[1]);
+	println(newList[2]);
+	//pop the last two elements
+	var lastOne = newList.pop();
+	var lastSecond = newList.pop();
+	//print the new list
+	println(newList[0]);
+	println(newList[1]);
+	println(newList[2]);
+}
