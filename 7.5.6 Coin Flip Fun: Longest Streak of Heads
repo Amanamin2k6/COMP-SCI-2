@@ -1,0 +1,51 @@
+var NUM_FLIPS = 100;
+var streak = "";
+var streak_num = 0;
+var highest_streak = 0;
+function start(){
+	var flips = flipCoins();
+	printArray(flips);
+	longestHeadsStreak(flips);
+}
+
+// This function should flip a coin NUM_FLIPS
+// times, and add the result to an array. We
+// return the result to the caller.
+function flipCoins(){
+	var flips = [];
+	for(var i = 0; i < NUM_FLIPS; i++){
+		if(Randomizer.nextBoolean()){
+			flips.push("Heads");
+		}else{
+			flips.push("Tails");
+		}
+	}
+	return flips;
+}
+
+function printArray(arr){
+	for(var i = 0; i < arr.length; i++){
+		println(i + ": " + arr[i]);
+	}
+}
+function longestHeadsStreak(flips){
+//use a for loop and to test every index for heads
+    for (var i = 0; i < flips.length; i++){
+//check if the element at i index is heads
+        if (flips[i] == "Heads"){
+// if it is heads, add to streak
+            streak_num += 1
+//change the highest streak number if the current streak is higher than the highest streak
+            if (streak_num > highest_streak){
+                highest_streak = streak_num;
+            }
+//if the element at i index is tails break the streak
+        }
+        if (flips[i] == "Tails"){
+            streak_num = 0;
+        }
+    }
+//print the results using the highest_streak variable
+    println("The longest Head streak is: " + highest_streak)
+    
+}
