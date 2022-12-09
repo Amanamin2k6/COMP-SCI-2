@@ -1,0 +1,42 @@
+var NUM_FLIPS = 100;
+var head_count = 0;
+var tail_count = 0;
+function start(){
+	var flips = flipCoins();
+	printArray(flips);
+	countHeadsAndTails(flips);
+}
+
+// This function should flip a coin NUM_FLIPS
+// times, and add the result to an array. We
+// return the result to the caller.
+function flipCoins(){
+	var flips = [];
+	for(var i = 0; i < NUM_FLIPS; i++){
+		if(Randomizer.nextBoolean()){
+			flips.push("Heads");
+			
+		}else{
+			flips.push("Tails");
+			
+		}
+	}
+	return flips;
+}
+
+function printArray(arr){
+	for(var i = 0; i < arr.length; i++){
+		println(i + ": " + arr[i]);
+	}
+}
+function countHeadsAndTails(flips) {
+    for (var i = 0; i < flips.length; i++){
+        if (flips[i] == "Heads"){
+            head_count+= 1;
+        }
+        if (flips[i] == "Tails"){
+            tail_count += 1;
+        }
+    }
+	print('Heads: ' + head_count + ", Tails: " + tail_count) 
+}
