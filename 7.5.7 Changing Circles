@@ -1,0 +1,45 @@
+//constants
+var NUM_CIRCLES = 15;
+var MIN_RADIUS = 10;
+var MAX_RADIUS = 40;
+var DELAY = 500;
+//variables
+var circles = [];
+function start(){
+    createRandomCircle();
+//create a timer loop that will update the circle color every DELAY miliseconds
+    setTimer(createCircle, DELAY);
+}
+//create the inital circles
+function createRandomCircle(){
+//set a random common color
+    var color = changeColors();
+//make a for loop that wil make NUM_CIRCLES of circles
+    for (var i = 0; i < NUM_CIRCLES; i++){
+//make the circle with a minimum and maximum radius
+        var cir = new Circle(Randomizer.nextInt(MIN_RADIUS, MAX_RADIUS));
+//set the position of the circle to a random location within the canvas boundaries
+        cir.setPosition(Randomizer.nextInt(40, 360),Randomizer.nextInt(40, 420));
+//set the color of the circle
+        cir.setColor(color);
+//add the circle to the canvas
+        add(cir);
+//add the circle to the circles list
+        circles.push(cir);
+    }
+}
+//a function that will update the color of the circles
+function createCircle(){
+//set a common color using the change color function
+    var color = changeColors();
+//for the number of circles in the circles list change the color to a common random color
+    for (var i = 0; i < circles.length; i++){
+        var sprite = circles[i];
+        sprite.setColor(color);
+    }
+}
+//use a randomizer to return a random color
+function changeColors(){
+    var color = Randomizer.nextColor();
+    return(color);
+}
