@@ -1,0 +1,12 @@
+function start(){
+	// Write your code here
+	// create the numList
+	var numList = ["2", "3", "5", "7", "11"];
+	//print index 0
+	println(numList[0]);
+	//print index 2
+	println(numList[2]);
+    //print index 4
+	println(numList[4]);
+
+}
