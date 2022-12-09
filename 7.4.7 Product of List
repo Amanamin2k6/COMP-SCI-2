@@ -1,0 +1,13 @@
+function start(){
+//define the variables
+    var arr = [1, 8, 3, 4, 2, 9];
+    var answer = 1;
+//a for loop to run an interation for every index in the arr list
+    for (var i = 0; i < arr.length; i++){
+//multiply a variable by each index
+        answer *= arr[i];
+    }
+//print the product of all the elements
+    println(answer)
+    
+}
