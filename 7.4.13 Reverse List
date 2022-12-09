@@ -1,0 +1,12 @@
+var reverse = [];
+function start(){
+	var arr = [1,2,3,4];
+    var reversed = reverseList(arr);
+    println(reversed);
+}
+function reverseList(arr){
+    for(var i = (arr.length - 1); i > -1; i--){
+        reverse.push(arr[i]);
+    }
+    return(reverse)
+}
