@@ -1,0 +1,4 @@
+- car distance, speed
+- by appplying safe conditions driving and having the car follow those conditions
+- you only have to set the rules once and then they can distribute those rules massively
+- no, because the computation is what makes the car able to apply the safe driving conditions
